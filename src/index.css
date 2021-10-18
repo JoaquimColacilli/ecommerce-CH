@@ -38,3 +38,9 @@ code {
   background-color: #04aa6d;
   color: white;
 }
+
+.cart {
+  margin: 0 auto;
+  padding: 0 auto;
+  margin-top: 0.7rem;
+}

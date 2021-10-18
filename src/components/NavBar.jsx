@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "../index.css";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
   return (
@@ -10,6 +11,7 @@ const NavBar = () => {
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
+      <CartWidget />
     </div>
   );
 };
