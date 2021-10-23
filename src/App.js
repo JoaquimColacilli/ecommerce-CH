@@ -7,9 +7,7 @@ function App() {
   return (
     <Fragment>
       <NavBar />
-      <h1>App para calcular tu Presupuesto.</h1>
-
-      <ItemListContainer />
+      <ItemListContainer titulo="Desafío 3" />
     </Fragment>
   );
 }
