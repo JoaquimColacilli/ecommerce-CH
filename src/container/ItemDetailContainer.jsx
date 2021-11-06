@@ -1,35 +1,29 @@
 import React, { useState, useEffect } from "react";
-import ItemList from "../components/ItemList";
+import ItemDetail from "../components/ItemDetail";
 import data from "../data/data";
 import { useParams } from "react-router-dom";
-
-import "../index.css";
-const ItemListContainer = (props) => {
-  const [productos, setProductos] = useState([]);
+const ItemDetailContainer = () => {
+  const [item, setItem] = useState({});
   const [cargando, setCargando] = useState(true);
-
-  const { categoriaId } = useParams();
-
-  console.log(categoriaId);
+  const { id } = useParams();
 
   useEffect(() => {
     setCargando(true);
-    const listaProductos = new Promise((res, rej) => {
+    const getItems = new Promise((resolve) => {
       setTimeout(() => {
-        res(data);
+        resolve(data);
       }, 1000);
     });
-    listaProductos.then((data) => {
-      categoriaId
-        ? setProductos(data.filter((i) => i.categoria === categoriaId))
-        : setProductos(data);
-      setCargando(false);
-    });
-  }, [categoriaId]);
+
+    getItems
+      .then((res) => {
+        setItem(res.find((i) => i.id === id));
+      })
+      .finally(() => setCargando(false));
+  }, [id]);
 
   return (
     <div>
-      <h1>{props.titulo}</h1>
       {cargando ? (
         <div class="sk-circle">
           <div class="sk-circle1 sk-child"></div>
@@ -46,10 +40,10 @@ const ItemListContainer = (props) => {
           <div class="sk-circle12 sk-child"></div>
         </div>
       ) : (
-        <ItemList productos={productos} />
+        <ItemDetail {...item} />
       )}
     </div>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Item = ({ nombre, desc, precio }) => {
+const Item = ({ id, nombre, desc, precio, imagen }) => {
+  console.log(id);
   return (
     <div className="container">
       <div className="row">
@@ -9,10 +11,14 @@ const Item = ({ nombre, desc, precio }) => {
             <div className="card-body">
               <h4 className="card-title">{nombre}</h4>
               <p className="card-text">{desc}</p>
+              <span>
+                <img src={imagen} alt={nombre} className={"small-img"} />
+              </span>
               <p className="card-text">${precio}</p>
-              <a href="#" className="btn btn-primary">
+
+              <Link to={`/producto/${id}`} className="btn btn-primary">
                 Ver Más
-              </a>
+              </Link>
             </div>
           </div>
         </div>

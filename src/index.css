@@ -49,6 +49,28 @@ h1 {
   text-align: center;
 }
 
+.small-img {
+  height: 90px;
+}
+
+.text-prod {
+  text-align: center;
+}
+
+.font-span {
+  font-weight: bold;
+}
+
+.activeClass {
+  color: rgb(79, 151, 19);
+  font-size: 15px;
+  flex-direction: row;
+}
+
+.links {
+  text-decoration: none;
+}
+
 /* SPINKIT */
 .sk-circle {
   margin: 100px auto;
