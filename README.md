@@ -18,7 +18,7 @@ Pagina e-commerce para la venta de productos tecnológicos, orientado al mundo d
 
 ## Demostración HOME
 
-![JCGamer Gifs1](https://gyazo.com/91082c296d049e868a3f48d3d9173f29)
+![JCGamer Gifs1](https://gyazo.com/91082c296d049e868a3f48d3d9173f29.gif)
 
 ## Demostración PRODUCTO
-![JCGamer Gifs2](https://gyazo.com/ad0133753e01300d920e37a7a01c33ce)
+![JCGamer Gifs2](https://gyazo.com/ad0133753e01300d920e37a7a01c33ce.gif)
