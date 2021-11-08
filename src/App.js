@@ -11,11 +11,11 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <ItemListContainer titulo="Desafío 3" />
+          <ItemListContainer titulo="JC Gaming" />
         </Route>
 
         <Route exact path="/categoria/:categoriaId">
-          <ItemListContainer titulo="Desafío 3" />
+          <ItemListContainer titulo="JC Gaming" />
         </Route>
 
         <Route path="/producto/:id" component={ItemDetailContainer} />

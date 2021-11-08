@@ -1,18 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "../index.css";
 import CartWidget from "./CartWidget";
-import { Nav, NavDropdown } from "react-bootstrap";
 
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  const categories = [
-    { id: "ghfj", address: "/", text: "Productos" },
-    { id: "fl2k", address: "/categoria/A", text: "Auriculares" },
-    { id: "sqhs", address: "/categoria/B", text: "Mouses" },
-    { id: "hukw", address: "/categoria/C", text: "Teclados" },
-  ];
-
   return (
     // <section style={{ background: "lightgray" }}>
     //   <CartWidget />
@@ -26,13 +18,13 @@ const NavBar = () => {
     //     );
     //   })}
     // </section>
-    <div class="topnav">
-      <Link to="/" class="active" href="#home">
+    <div className="topnav">
+      <Link to="/" className="active" href="#home">
         Home
       </Link>
-      <Link to="/producto/A">Auriculares</Link>
-      <Link to="/producto/B">Mouses</Link>
-      <Link to="/producto/C">Teclados</Link>
+      <Link to="/producto/1">Auriculares</Link>
+      <Link to="/producto/2">Mouses</Link>
+      <Link to="/producto/3">Teclados</Link>
       <CartWidget />
     </div>
   );
