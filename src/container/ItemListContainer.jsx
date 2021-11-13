@@ -10,8 +10,6 @@ const ItemListContainer = (props) => {
 
   const { categoriaId } = useParams();
 
-  console.log(categoriaId);
-
   useEffect(() => {
     setCargando(true);
     const listaProductos = new Promise((res, rej) => {

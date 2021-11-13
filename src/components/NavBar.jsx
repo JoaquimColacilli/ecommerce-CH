@@ -25,7 +25,9 @@ const NavBar = () => {
       <Link to="/producto/1">Auriculares</Link>
       <Link to="/producto/2">Mouses</Link>
       <Link to="/producto/3">Teclados</Link>
-      <CartWidget />
+      <Link to="/cart">
+        <CartWidget />
+      </Link>
     </div>
   );
 };

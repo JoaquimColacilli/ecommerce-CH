@@ -7,6 +7,7 @@ const data = [
     precio: 150,
     imagen:
       "https://www.sintagmatecnologia.com.ar/Temp/App_WebSite/App_PictureFiles/Items/6972431712088_800.jpg",
+    stock: "6",
   },
   {
     id: "2",
@@ -16,6 +17,7 @@ const data = [
     precio: 50,
     imagen:
       "https://www.sincable.mx/wp-content/uploads/2020/04/0-Raton-gamer-Dario-Lo-Presti-61562952_m-1024x683.jpg",
+    stock: "4",
   },
   {
     id: "3",
@@ -24,6 +26,7 @@ const data = [
     categoria: "C",
     precio: 55,
     imagen: "https://img.lovepik.com/photo/50118/5655.jpg_wh300.jpg",
+    stock: "8",
   },
 ];
 
