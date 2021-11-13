@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { Context } from "../context/CartContext";
 const Cart = () => {
-  const { cart, total, unidades } = useContext(Context);
+  const { cart, total, unidades, eliminarCarrito, eliminarProducto } =
+    useContext(Context);
 
   return (
     <>
-      <h2 style={{ textAlign: "center" }}>
-        El total del carrito es ${total} y tenes {unidades} unidad/es.
-      </h2>
+      {total !== 0 ? (
+        <h2 style={{ textAlign: "center" }}>
+          El total del carrito es ${total} y tenes {unidades} unidad/es.
+        </h2>
+      ) : null}
       <div className="container mt-5 mb-5">
         <div className="d-flex justify-content-center row">
           <div className="col-md-8">
@@ -46,17 +49,22 @@ const Cart = () => {
                   <h5 className="text-grey">${item.precio}</h5>
                 </div>
                 <div className="d-flex align-items-center">
-                  <i className="fa fa-trash mb-1 text-danger">X</i>
+                  <button
+                    className="fa fa-trash mb-1 text-danger"
+                    onClick={() => eliminarProducto(item.id)}
+                  >
+                    X
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       ))}
-      <div className="container mt-5 mb-5">
+      <div className="container mt-3 mb-3">
         <div className="d-flex justify-content-center row">
           <div className="col-md-8">
-            <div className="d-flex flex-row align-items-right mt-3 p-2 bg-white rounded">
+            <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
               <button
                 className="btn btn-warning btn-block btn-lg ml-2 pay-button"
                 type="button"
@@ -64,6 +72,13 @@ const Cart = () => {
                 Pagar
               </button>
             </div>
+            <button
+              onClick={() => eliminarCarrito()}
+              className="btn btn-danger btn-block btn-lg ml-2"
+              type="button"
+            >
+              Eliminar Productos
+            </button>
           </div>
         </div>
       </div>

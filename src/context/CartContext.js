@@ -18,7 +18,6 @@ const CartFuncion = ({ children }) => {
           precio: producto.precio,
           cantidad: cantidad,
           subtotal: producto.precio * cantidad,
-          imagen: producto.imagen,
         },
       ]);
       setTotal(total + producto.precio * cantidad);
@@ -36,8 +35,29 @@ const CartFuncion = ({ children }) => {
     }
   };
 
+  const eliminarCarrito = () => {
+    setUnidades(0);
+    setTotal(0);
+    setCart([]);
+    console.log(total);
+  };
+
+  const eliminarProducto = (id) => {
+    // cart.filter((producto) => producto.id !== id);
+    console.log(id);
+  };
+
   return (
-    <Context.Provider value={{ cart, unidades, total, onAdd }}>
+    <Context.Provider
+      value={{
+        cart,
+        unidades,
+        total,
+        onAdd,
+        eliminarCarrito,
+        eliminarProducto,
+      }}
+    >
       {children}
     </Context.Provider>
   );

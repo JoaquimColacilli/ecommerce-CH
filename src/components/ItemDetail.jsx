@@ -33,7 +33,9 @@ const ItemDetail = ({ id, nombre, desc, precio, imagen, stock }) => {
           <ItemCount stock={stock} onAdd={botonAgregar} />
         ) : (
           <Link to="/cart">
-            <button>Terminar Compra</button>
+            <button className="btn btn-success cart-button">
+              Terminar Compra
+            </button>
           </Link>
         )}
       </div>

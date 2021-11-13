@@ -265,3 +265,8 @@ body {
 .qty i {
   font-size: 11px;
 }
+
+.center {
+  width: 150px;
+  margin: 40px auto;
+}
