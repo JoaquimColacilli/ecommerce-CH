@@ -42,9 +42,16 @@ const CartFuncion = ({ children }) => {
     console.log(total);
   };
 
-  const eliminarProducto = (id) => {
-    // cart.filter((producto) => producto.id !== id);
-    console.log(id);
+  // const eliminarProducto = (id) => {
+  //   // cart.filter((producto) => producto.id !== id);
+
+  //   console.log(id);
+  // };
+
+  const removeItem = (itemId) => {
+    const cartWithoutItem = cart.filter((elem) => elem.id !== itemId);
+    setCart(cartWithoutItem);
+    console.log(cartWithoutItem);
   };
 
   return (
@@ -55,7 +62,7 @@ const CartFuncion = ({ children }) => {
         total,
         onAdd,
         eliminarCarrito,
-        eliminarProducto,
+        removeItem,
       }}
     >
       {children}

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../context/CartContext";
 import { Link } from "react-router-dom";
 const Cart = () => {
-  const { cart, total, unidades, eliminarCarrito, eliminarProducto } =
+  const { cart, total, unidades, eliminarCarrito, removeItem } =
     useContext(Context);
 
   return (
@@ -61,7 +61,7 @@ const Cart = () => {
                 <div className="d-flex align-items-center">
                   <button
                     className="fa fa-trash mb-1 text-danger"
-                    onClick={() => eliminarProducto(item.id)}
+                    onClick={() => removeItem(item.id)}
                   >
                     X
                   </button>
