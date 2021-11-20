@@ -3,6 +3,9 @@ import ItemDetail from "../components/ItemDetail";
 import data from "../data/data";
 import { useParams } from "react-router-dom";
 
+import db from "../firebase/firebase";
+import { doc, getDoc } from "firebase/firestore";
+
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const [cargando, setCargando] = useState(true);
@@ -10,17 +13,28 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     setCargando(true);
-    const getItems = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(data);
-      }, 1000);
-    });
+    // const getItems = new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve(data);
+    //   }, 1000);
+    // });
 
-    getItems
+    // getItems
+    //   .then((res) => {
+    //     setItem(res.find((i) => i.id === id));
+    //   })
+    //   .finally(() => setCargando(false));
+
+    const myItem = doc(db, "producto", id);
+
+    getDoc(myItem)
       .then((res) => {
-        setItem(res.find((i) => i.id === id));
+        const result = { id: res.id, ...res.data() };
+        setItem(result);
       })
-      .finally(() => setCargando(false));
+      .finally(() => {
+        setCargando(false);
+      });
   }, [id]);
 
   return (

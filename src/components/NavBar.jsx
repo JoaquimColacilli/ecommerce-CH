@@ -22,9 +22,9 @@ const NavBar = () => {
       <Link to="/" className="active" href="#home">
         Home
       </Link>
-      <Link to="/producto/1">Auriculares</Link>
-      <Link to="/producto/2">Mouses</Link>
-      <Link to="/producto/3">Teclados</Link>
+      <Link to="/producto/PQ16M2JRsa1zZybmMdbK">Auriculares</Link>
+      <Link to="/producto/Y87rgkpLapaavUaNIlzO">Mouses</Link>
+      <Link to="/producto/uhkPpgjmoumXnC5Hiy40">Teclados</Link>
       <Link to="/cart">
         <CartWidget />
       </Link>
