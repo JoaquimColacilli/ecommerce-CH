@@ -10,19 +10,23 @@ const Cart = () => {
         <h2 style={{ textAlign: "center" }}>
           El total del carrito es ${total} y tenes {unidades} unidad/es.
         </h2>
-      ) : null}
-      <div className="container mt-5 mb-5">
-        <div className="d-flex justify-content-center row">
-          <div className="col-md-8">
-            <div className="p-2">
-              <h4>Carrito</h4>
-              <div className="d-flex flex-row align-items-center pull-right">
-                <i className="fa fa-angle-down"></i>
+      ) : (
+        <h2 style={{ textAlign: "center" }}>No hay productos en el carrito.</h2>
+      )}
+      {total === 0 ? null : (
+        <div className="container mt-5 mb-5">
+          <div className="d-flex justify-content-center row">
+            <div className="col-md-8">
+              <div className="p-2">
+                <h4>Carrito</h4>
+                <div className="d-flex flex-row align-items-center pull-right">
+                  <i className="fa fa-angle-down"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       {cart.map((item) => (
         <div className="container mt-5 mb-5">
@@ -61,27 +65,29 @@ const Cart = () => {
           </div>
         </div>
       ))}
-      <div className="container mt-3 mb-3">
-        <div className="d-flex justify-content-center row">
-          <div className="col-md-8">
-            <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+      {total === 0 ? null : (
+        <div className="container mt-3 mb-3">
+          <div className="d-flex justify-content-center row">
+            <div className="col-md-8">
+              <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+                <button
+                  className="btn btn-warning btn-block btn-lg ml-2 pay-button"
+                  type="button"
+                >
+                  Pagar
+                </button>
+              </div>
               <button
-                className="btn btn-warning btn-block btn-lg ml-2 pay-button"
+                onClick={() => eliminarCarrito()}
+                className="btn btn-danger btn-block btn-lg ml-2"
                 type="button"
               >
-                Pagar
+                Eliminar Productos
               </button>
             </div>
-            <button
-              onClick={() => eliminarCarrito()}
-              className="btn btn-danger btn-block btn-lg ml-2"
-              type="button"
-            >
-              Eliminar Productos
-            </button>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };

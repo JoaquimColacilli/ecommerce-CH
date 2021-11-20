@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import data from "../data/data";
 import { useParams } from "react-router-dom";
+
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
   const [cargando, setCargando] = useState(true);
