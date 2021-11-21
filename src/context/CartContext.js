@@ -50,8 +50,14 @@ const CartFuncion = ({ children }) => {
 
   const removeItem = (itemId) => {
     const cartWithoutItem = cart.filter((elem) => elem.id !== itemId);
+
     setCart(cartWithoutItem);
-    console.log(cartWithoutItem);
+
+    setUnidades(unidades - 1);
+
+    cart.map((car) => {
+      if (car.id === itemId) setTotal(total - car.subtotal);
+    });
   };
 
   return (
