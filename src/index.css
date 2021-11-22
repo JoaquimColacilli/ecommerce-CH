@@ -270,3 +270,7 @@ body {
   width: 150px;
   margin: 40px auto;
 }
+
+.paddingCardItem {
+  padding-bottom: 30px;
+}

@@ -44,8 +44,10 @@ const ItemListContainer = (props) => {
   }, [categoriaId]);
 
   return (
-    <div>
-      <h1>{props.titulo}</h1>
+    <div className="container">
+      <div className="row">
+        <h1>{props.titulo}</h1>
+      </div>
       {cargando ? (
         <div className="sk-circle">
           <div className="sk-circle1 sk-child"></div>
@@ -62,7 +64,9 @@ const ItemListContainer = (props) => {
           <div className="sk-circle12 sk-child"></div>
         </div>
       ) : (
-        <ItemList productos={productos} />
+        <div className="row">
+          <ItemList productos={productos} />
+        </div>
       )}
     </div>
   );

@@ -9,7 +9,7 @@ const ItemDetail = ({ id, nombre, desc, precio, imagen, stock }) => {
 
   const botonAgregar = (props) => {
     setBuy(true);
-    onAdd({ id, nombre, precio }, props.unidades);
+    onAdd({ id, nombre, precio, imagen }, props.unidades);
   };
 
   return !id ? (

@@ -18,6 +18,7 @@ const CartFuncion = ({ children }) => {
           precio: producto.precio,
           cantidad: cantidad,
           subtotal: producto.precio * cantidad,
+          imagen: producto.imagen,
         },
       ]);
       setTotal(total + producto.precio * cantidad);

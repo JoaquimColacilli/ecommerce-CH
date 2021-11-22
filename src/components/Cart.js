@@ -78,19 +78,21 @@ const Cart = () => {
             <div className="col-md-8">
               <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
                 <button
-                  className="btn btn-warning btn-block btn-lg ml-2 pay-button"
+                  className="btn btn-warning btn-block btn-lg ml-2"
                   type="button"
                 >
                   Pagar
                 </button>
               </div>
-              <button
-                onClick={() => eliminarCarrito()}
-                className="btn btn-danger btn-block btn-lg ml-2"
-                type="button"
-              >
-                Eliminar Productos
-              </button>
+              <div className="d-flex flex-row align-items-center  p-2 bg-white rounded">
+                <button
+                  onClick={() => eliminarCarrito()}
+                  className="btn btn-danger btn-block btn-lg ml-2"
+                  type="button"
+                >
+                  Eliminar Productos
+                </button>
+              </div>
             </div>
           </div>
         </div>
