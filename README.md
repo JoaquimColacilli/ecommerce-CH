@@ -1,4 +1,4 @@
-# presupuesto-CH
+# ecommerce-CH
 Proyecto Carrito ReactJS | Colacilli - CoderHouse
 
 Pagina e-commerce para la venta de productos tecnológicos, orientado al mundo del Gaming.
