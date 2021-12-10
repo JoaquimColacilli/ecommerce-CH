@@ -64,6 +64,9 @@ const CartFuncion = ({ children }) => {
   return (
     <Context.Provider
       value={{
+        setTotal,
+        setCart,
+        setUnidades,
         cart,
         unidades,
         total,

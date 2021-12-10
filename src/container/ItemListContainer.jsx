@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../components/ItemList";
-import data from "../data/data";
+
 import { useParams } from "react-router-dom";
 import db from "../firebase/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -14,17 +14,6 @@ const ItemListContainer = (props) => {
 
   useEffect(() => {
     setCargando(true);
-    // const listaProductos = new Promise((res, rej) => {
-    //   setTimeout(() => {
-    //     res(data);
-    //   }, 1000);
-    // });
-    // listaProductos.then((data) => {
-    //   categoriaId
-    //     ? setProductos(data.filter((i) => i.categoria === categoriaId))
-    //     : setProductos(data);
-    //   setCargando(false);
-    // });
 
     const myItems = categoriaId
       ? query(collection(db, "producto"), where("categoria", "==", categoriaId))
@@ -33,10 +22,8 @@ const ItemListContainer = (props) => {
     getDocs(myItems)
       .then((res) => {
         const results = res.docs.map((doc) => {
-          console.log(doc.id);
           return { ...doc.data(), id: doc.id };
         });
-        console.log(results);
 
         setProductos(results);
       })

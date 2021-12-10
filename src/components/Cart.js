@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   const { cart, total, unidades, eliminarCarrito, removeItem } =
     useContext(Context);
-  console.log(cart);
+
   return (
     <>
       {total !== 0 ? (
@@ -77,12 +77,13 @@ const Cart = () => {
           <div className="d-flex justify-content-center row">
             <div className="col-md-8">
               <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
-                <button
+                <Link
+                  to="/formulario"
                   className="btn btn-warning btn-block btn-lg ml-2"
                   type="button"
                 >
                   Pagar
-                </button>
+                </Link>
               </div>
               <div className="d-flex flex-row align-items-center  p-2 bg-white rounded">
                 <button

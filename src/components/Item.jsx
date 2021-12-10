@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, nombre, desc, precio, imagen }) => {
-  console.log(id);
   return (
     <div className="col-lg-4 paddingCardItem">
       <div className="card">

@@ -6,6 +6,7 @@ import ItemDetailContainer from "./container/ItemDetailContainer";
 import { CartFuncion } from "./context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cart from "./components/Cart";
+import Formulario from "./components/Formulario";
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
 
           <Route exact path="/cart">
             <Cart />
+          </Route>
+
+          <Route exact path="/formulario">
+            <Formulario />
           </Route>
 
           <Route exact path="/categoria/:categoriaId">

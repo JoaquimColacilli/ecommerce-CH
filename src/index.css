@@ -274,3 +274,38 @@ body {
 .paddingCardItem {
   padding-bottom: 30px;
 }
+
+.background-body {
+  background: linear-gradient(1deg, grey, white);
+  background-repeat: no-repeat;
+}
+
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.form {
+  width: 450px;
+}
+
+.paddingDetail {
+  padding-top: 5vh;
+}
+
+.contenedorContador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contadorItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
