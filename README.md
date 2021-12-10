@@ -21,4 +21,4 @@ Pagina e-commerce para la venta de productos tecnológicos, orientado al mundo d
 ![JCGamer Gifs1](https://github.com/JoaquimColacilli/ecommerce-CH/blob/main/gifs/Sin-t%C3%ADtulo.gif)
 
 ## Autor
-```Joaquim Colacilli```
+Joaquim Colacilli
