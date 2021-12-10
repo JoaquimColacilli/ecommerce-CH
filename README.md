@@ -15,10 +15,10 @@ Pagina e-commerce para la venta de productos tecnológicos, orientado al mundo d
 
 1. Bootrstrap para el diseño.
 2. RRD para la navegación.
+3. React Hook Form para formularios
 
-## Demostración HOME
+## Demostración Página Completa
+![JCGamer Gifs1](https://github.com/JoaquimColacilli/ecommerce-CH/blob/main/gifs/Sin-t%C3%ADtulo.gif)
 
-![JCGamer Gifs1](https://gyazo.com/91082c296d049e868a3f48d3d9173f29.gif)
-
-## Demostración PRODUCTO
-![JCGamer Gifs2](https://github.com/JoaquimColacilli/ecommerce-CH/blob/main/gifs/Sin-t%C3%ADtulo.gif)
+## Autor
+```Joaquim Colacilli```
