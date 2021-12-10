@@ -21,4 +21,4 @@ Pagina e-commerce para la venta de productos tecnológicos, orientado al mundo d
 ![JCGamer Gifs1](https://gyazo.com/91082c296d049e868a3f48d3d9173f29.gif)
 
 ## Demostración PRODUCTO
-![JCGamer Gifs2](https://github.com/JoaquimColacilli/ecommerce-CH/blob/main/gifs/ch.gif)
+![JCGamer Gifs2](https://github.com/JoaquimColacilli/ecommerce-CH/blob/main/gifs/Sin-t%C3%ADtulo.gif)
